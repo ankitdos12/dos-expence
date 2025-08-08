@@ -12,8 +12,8 @@ const { authMiddleware } = require("../midleware/authMiddleware");
 
 router.post("/", authMiddleware, createExpense);
 router.get("/", authMiddleware, getExpenses);
-router.get("/", authMiddleware, getFilteredExpenses);
-router.get("/:userId", authMiddleware, getExpensesByUser);
+router.get("/:userId", authMiddleware, getFilteredExpenses);
+router.get("/my/:userId", authMiddleware, getExpensesByUser);
 
 
 
